@@ -1,0 +1,27 @@
+{
+  "name": "pages-to-pdf",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Сборка Markdown-страниц и Cursor Canvas (.canvas.tsx) в PDF",
+  "bin": {
+    "pages-to-pdf": "./src/build-pdf.js"
+  },
+  "scripts": {
+    "build": "node src/build-pdf.js",
+    "build:sample-canvas": "node src/build-pdf.js --src examples/sample.canvas.tsx",
+    "build:sample-md": "node src/build-pdf.js --src examples/md",
+    "build:onboarding": "node src/build-pdf.js --config presets/onboarding.json",
+    "build:onboarding-priema": "node src/build-pdf.js --config presets/onboarding-priema.json",
+    "build:onboarding-uvolneniya": "node src/build-pdf.js --config presets/onboarding-uvolneniya.json"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.0",
+    "marked": "^15.0.0",
+    "puppeteer-core": "^24.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
